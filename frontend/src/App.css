@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* index.css or App.css */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --primary-color: #3b82f6;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --primary-color: #2563eb;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --primary-color: #3b82f6;
+}
+
+[data-theme="coffee"] {
+  --bg-color: #3e2723;
+  --text-color: #f5f5dc;
+  --primary-color: #c49b66;
+}
+
+[data-theme="retro"] {
+  --bg-color: #fef3c7;
+  --text-color: #78350f;
+  --primary-color: #f59e0b;
+}
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: #3b82f6;
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --primary-color: #6366f1;
+}
+
+[data-theme="retro"] {
+  --bg-color: #fef3c7;
+  --text-color: #78350f;
+  --primary-color: #facc15;
+}
+
+[data-theme="coffee"] {
+  --bg-color: #3e2723;
+  --text-color: #f5f5dc;
+  --primary-color: #795548;
+}
+
+[data-theme="cupcake"] {
+  --bg-color: #fce7f3;
+  --text-color: #4b5563;
+  --primary-color: #f472b6;
+}
+
+[data-theme="synthwave"] {
+  --bg-color: #2d0036;
+  --text-color: #f0abfc;
+  --primary-color: #e879f9;
+}
+
+[data-theme="aqua"] {
+  --bg-color: #d1f5f5;
+  --text-color: #064e3b;
+  --primary-color: #14b8a6;
+}
+
+[data-theme="dracula"] {
+  --bg-color: #282a36;
+  --text-color: #f8f8f2;
+  --primary-color: #bd93f9;
+}
+
+[data-theme="valentine"] {
+  --bg-color: #ffe4e6;
+  --text-color: #be123c;
+  --primary-color: #ec4899;
+}
+
+[data-theme="halloween"] {
+  --bg-color: #1a202c;
+  --text-color: #f97316;
+  --primary-color: #f59e0b;
+}
+
+[data-theme="night"] {
+  --bg-color: #0f172a;
+  --text-color: #e0e7ff;
+  --primary-color: #60a5fa;
+}
+
+[data-theme="luxury"] {
+  --bg-color: #1f2937;
+  --text-color: #d1d5db;
+  --primary-color: #bfae48;
+}
+
+[data-theme="sunset"] {
+  --bg-color: #fcd34d;
+  --text-color: #78350f;
+  --primary-color: #fb923c;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
