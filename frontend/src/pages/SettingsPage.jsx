@@ -25,9 +25,8 @@ const SettingsPage = () => {
             <button
               key={t}
               onClick={() => setTheme(t)}
-              className={`p-2 rounded-lg border text-sm font-medium capitalize transition-colors ${
-                theme === t ? "bg-gray-200 border-black" : "hover:bg-gray-100 border-gray-300"
-              }`}
+              className={`p-2 rounded-lg border text-sm font-medium capitalize transition-colors ${theme === t ? "bg-gray-200 border-black" : "hover:bg-gray-100 border-gray-300"
+                }`}
             >
               {t}
             </button>
@@ -46,7 +45,7 @@ const SettingsPage = () => {
                 J
               </div>
               <div>
-                <h3 className="font-medium text-sm">Bhagavan</h3>
+                <h3 className="font-medium text-sm">Rishi</h3>
                 <p className="text-xs text-gray-500">Online</p>
               </div>
             </div>
@@ -60,11 +59,10 @@ const SettingsPage = () => {
                 className={`flex ${msg.isSent ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`rounded-lg px-4 py-2 max-w-xs shadow ${
-                    msg.isSent
+                  className={`rounded-lg px-4 py-2 max-w-xs shadow ${msg.isSent
                       ? "bg-[var(--primary-color)] text-white"
                       : "bg-gray-200 text-black"
-                  }`}
+                    }`}
                 >
                   <p className="text-sm">{msg.content}</p>
                   <p className="text-[10px] mt-1 text-gray-400">12:00 PM</p>
