@@ -16,7 +16,7 @@ export const useChatStore = create((set, get) => ({
       const res = await axiosInstance.get("/messages/users");
       set({ users: res.data });
     } catch (error) {
-      toast.error(error.response?.data?.message || "Failed to fetch users");
+      toast.error(error.response?.data?.message || "Failed to load users");
     } finally {
       set({ isUsersLoading: false });
     }
@@ -28,7 +28,7 @@ export const useChatStore = create((set, get) => ({
       const res = await axiosInstance.get(`/messages/${userId}`);
       set({ messages: res.data });
     } catch (error) {
-      toast.error(error.response?.data?.message || "Failed to fetch messages");
+      toast.error(error.response?.data?.message || "Failed to load messages");
     } finally {
       set({ isMessagesLoading: false });
     }
@@ -64,11 +64,10 @@ export const useChatStore = create((set, get) => ({
       }
     });
   },
+
   unsubscribeFromMessages: () => {
     const socket = useAuthStore.getState().socket;
-    if (socket) {
-      socket.off("newMessage");
-    }
+    if (socket) socket.off("newMessage");
   },
 
   setSelectedUser: (selectedUser) => {
